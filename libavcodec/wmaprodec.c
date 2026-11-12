@@ -2152,6 +2152,7 @@ AVCodec ff_xmaframes_decoder = {
     .init           = xmaframes_decode_init,
     .close          = xmaframes_decode_end,
     .decode         = xmaframes_decode_packet,
+    .flush          = wmapro_flush,
     .capabilities   = AV_CODEC_CAP_DR1,
     .caps_internal  = FF_CODEC_CAP_INIT_CLEANUP,
     .sample_fmts    = (const enum AVSampleFormat[]) { AV_SAMPLE_FMT_FLTP,
